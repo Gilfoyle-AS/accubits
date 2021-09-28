@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "447dc4ad-b7bd-4060-843c-0e1baebe1b8f",
+		"name": "accubits",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\":\"arnav\",\n\t\"lastname\":\"sharma\",\n\t\"email\":\"arnav.sharma56@gmail.com\",\n\t\"age\":\"25\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/adduser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adduser"
+					]
+				},
+				"description": "this request adds a new user into the database"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "File",
+							"type": "file",
+							"src": "/E:/Accubits assignment/files/sample.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/uploadcsv",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"uploadcsv"
+					]
+				},
+				"description": "This uploads a csv to the node server"
+			},
+			"response": []
+		}
+	]
+}
